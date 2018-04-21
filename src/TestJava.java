@@ -43,5 +43,10 @@ public class TestJava {
 			System.out.println(x1[i]);
 		}
 	}
+	
+//	public static int testBinarySearch () {
+//		int[] a = {1, 2, 3, 4, 5};
+//		Arrays.binarySearch(a, -1);
+//	}
 
 }

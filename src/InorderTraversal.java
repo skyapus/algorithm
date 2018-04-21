@@ -22,6 +22,10 @@ public class InorderTraversal {
 		 * and it should never be go the "while left loop" again
 		 * 
 		 * This is a little bit different from post order, which there is track UP/DOWN traversal
+		 * 
+		 * Invariant:
+		 *    The node in the stack are nodes whose left node has been processed, when it is its turn to pop, mean it is ready to be visited (print)
+		 *    The node in current is node whose left node need to be explored
 		 */
 		TreeNode current = root;
 		while (current!=null || !s.isEmpty()) {
@@ -31,8 +35,7 @@ public class InorderTraversal {
 				current=current.left;
 			}
 			current = s.pop();
-			q.offer(current);
-			// go to right
+			// go to right (explore right)
   		    current=current.right;
 						
 		}
